@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            
+        </script>
+    </head>
+    <body>
+        <table border="1" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Company</th> 
+                    <th>Contact</th> 
+                    <th>Country</th> 
+                    <th>Action</th> 
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dollorinfotech</td>
+                    <td>Anil Dollor</td>
+                    <td>INdia</td>
+                    <td>
+                        <button>View</button>
+                        <button>Edit</button>
+                        <button onclick="deleteMyRow(this);">Delete1</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>OceanTel</td>
+                    <td>Sunil Dollor</td>
+                    <td>UK</td>
+                    <td>
+                        <button>View</button>
+                        <button>Edit</button>
+                        <button onclick="deleteMyRow(this);">Delete2</button>
+                    </td>
+                </tr>
+            </tbodys>
+        </table>
+        <script>
+            //1. Function define one time process
+            function deleteMyRow(elem){
+                console.log(elem.closest('tr'));
+                elem.closest('tr').remove();
+
+            }
+
+            //2. Function calling multiple time process
+        </script>
+    </body>
+</html>
