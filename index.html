@@ -18,6 +18,7 @@
                     <th>Action</th> 
                 </tr>
             </thead>
+            
             <tbody>
                 <tr>
                     <td>Dollorinfotech</td>
@@ -25,7 +26,7 @@
                     <td>INdia</td>
                     <td>
                         <button>View</button>
-                        <button>Edit</button>
+                        <button onclick="editMyCompany(this)">Edit</button>
                         <button onclick="deleteMyRow(this);">Delete1</button>
                     </td>
                 </tr>
@@ -35,13 +36,25 @@
                     <td>UK</td>
                     <td>
                         <button>View</button>
-                        <button>Edit</button>
+                        <button onclick="editMyCompany(this)">Edit</button>
                         <button onclick="deleteMyRow(this);">Delete2</button>
                     </td>
                 </tr>
             </tbodys>
         </table>
         <script>
+            //1. function definatino one time process
+            function editMyCompany(elem){
+                let cname = prompt('Enter your company name');
+                console.log(cname);
+                console.log(elem.closest('tr'));//Traversing Up
+                //Traversing Down
+                console.log(elem.closest('tr').querySelector('td:first-child'));
+                elem.closest('tr').querySelector('td:first-child').innerHTML = cname; // Associativiy of Opertor
+                
+
+            }
+
             //1. Function define one time process
             function deleteMyRow(elem){
                 console.log(elem.closest('tr'));
